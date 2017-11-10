@@ -111,7 +111,7 @@ def filter_sentence_technicisms(citing_sentence):
             #print(word)
             #print(citing_sentence)
         #citing_sentence = re.sub("\?", "", citing_sentence) #to remove citations
-        with open('/project/elife/english_words/wordsEn.txt', 'r') as word_file:
+        with open('./english_words/wordsEn.txt', 'r') as word_file:
             english_words = list(word.strip().lower() for word in word_file)
         
         citing_sentence = ' '.join([word for word in citing_sentence.split() if ((word not in (stopwords.words('english'))) and (word in english_words))])
