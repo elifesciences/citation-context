@@ -83,7 +83,7 @@ ________________________________________________________________________________
 Used to avoid problems with random newlines when getting the sections of the papers. In particular with the maintext function in find_section.py
 
 ____________________________________________________________________________________________________________________
-find_section.py
+[find_section.py](modules/find_section.py)
 
 .doi
 	Finds DOI.
