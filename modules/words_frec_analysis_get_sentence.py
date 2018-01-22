@@ -38,7 +38,8 @@ def analysis(citing_sentences_list):
 
     citing_sentences_original = deepcopy(citing_sentences_list) # This is a list of lists, so you need deepcopy. We are keeping a copy because we are going to modify = citing_sentences_list
     filtered_sentences_list = citing_sentences_list.apply(filter_sentence)
-    print(filtered_sentences_list)
+    #print("Sentences where the paper was cited: ")
+    #print(filtered_sentences_list)
 
     count_vectorizer = CountVectorizer(max_features=5) # We will check the X most  frequent words  (max_features = X)
     # count_vectorizer = CountVectorizer(max_features) 
@@ -46,7 +47,7 @@ def analysis(citing_sentences_list):
 
     try:
         frequent_words = count_vectorizer.get_feature_names()
-        print(frequent_words)
+        print("Most frequent words: ", frequent_words)
     except ValueError:
         print("No sentences to analyse") #It may happen that we hava filetered out all the words in the sentence!!!
         return
@@ -80,6 +81,7 @@ def analysis(citing_sentences_list):
     sentence = sentences_toCheck[sentences_toCheck['sentence_length'] == min_length]["citing_sentence"]
     
     # To print the full content
+    print("\n Representative sentence:")
     import sys
     sentence.to_csv(sys.stdout)
     
