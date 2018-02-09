@@ -8,6 +8,13 @@ This is a collection of open access papers that can be accessed through a FTP se
 ____________________________________________________________________________________________________________________
 PROGRAMS
 
+
+____________________________________________________________________________________________________________________
+[front.ipynb]
+
+•	It runs sequentially the different programs described below and commnents them. 
+•	It allows to pick the DOIs of the papers to analyse directly from this notebook or from a file (DOIs_1000times.tsv is provided as an example). 
+
 ____________________________________________________________________________________________________________________
 [download_from_pmc_ftp.ipynb](download_from_pmc_ftp.ipynb)
 
