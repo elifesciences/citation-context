@@ -8,15 +8,27 @@ This is a collection of open access papers that can be accessed through a FTP se
 ____________________________________________________________________________________________________________________
 PROGRAMS
 
+
 ____________________________________________________________________________________________________________________
-get_papers.ipynb
+[front.ipynb]
+
+•	It runs sequentially the different programs described below and commnents them. 
+•	It allows to pick the DOIs of the papers to analyse directly from this notebook or from a file (DOIs_1000times.tsv is provided as an example). 
+
+____________________________________________________________________________________________________________________
+[download_from_pmc_ftp.ipynb](download_from_pmc_ftp.ipynb)
+
+•	Downloads bulk archives from PMC's FTP server.
+
+____________________________________________________________________________________________________________________
+[get_papers.ipynb](get_papers.ipynb)
 
 •	It takes a list of DOIs (directly from the code or reads them from a file).
 •	It finds papers in FTP_PUBMED citing these DOIs. For each DOI it saves the list of papers in a file (out_csv)
 •	Preprocessing data. Remove random spaces and store in a new file. 
 
 ____________________________________________________________________________________________________________________
-analyse_papers.ipynb
+[analyse_papers.ipynb](analyse_papers.ipynb)
 
 	Analysis of several papers 
 •	Analyse file containing papers citing a particular DOI. This DOI can be read from a file (the one used in get_papers) or directly introduced in a list.
@@ -49,7 +61,7 @@ Analysis of just one DOI
 •	Plot and analysis of just one paper. 
 
 ____________________________________________________________________________________________________________________
-find_word_freq_readfiles.ipynb
+[find_word_freq_readfiles.ipynb](find_word_freq_readfiles.ipynb)
 
 •	It reads the dataframe with the analysis (file_df_analysis) and the dataframe with the histogram (file_df_analysis_hist) information created by “analyse_papers.ipynb”.
 •	Frequency analysis of the sentence were a paper was cited. It finds a representative sentence showing how the a paper has been cited in the different sections. It is selected by getting the list of sentences containing the maximum number of most frequent words used when citing the paper (in each section). If there are several sentences it picks the shortest one.
@@ -71,14 +83,14 @@ ________________________________________________________________________________
 MODULES:
 
 ____________________________________________________________________________________________________________________
-bs_preprocess.py
+[bs_preprocess.py](modules/bs_preprocess.py)
 
 .bs_preprocess
 	Removes distracting whitespaces and newline characters.
 Used to avoid problems with random newlines when getting the sections of the papers. In particular with the maintext function in find_section.py
 
 ____________________________________________________________________________________________________________________
-find_section.py
+[find_section.py](modules/find_section.py)
 
 .doi
 	Finds DOI.
@@ -94,13 +106,13 @@ find_section.py
 	If finds the references directly
 
 ____________________________________________________________________________________________________________________
-find_reference_id.py
+[find_reference_id.py](modules/find_reference_id.py)
 
 . find_id
 	It finds the number of reference of the cited paper in the list of references
 
 ____________________________________________________________________________________________________________________
-get_df_analise_section.py
+[get_df_analise_section.py](modules/get_df_analise_section.py)
 
 . get_df	
 
@@ -108,7 +120,7 @@ Returns dataframe:
 df['cited_DOI', 'citing_DOI', 'reference_id', 'introduction_found', 'cited_in_introduction', 'maintext_found', 'cited_in_maintext', 'discussion_found', 'cited_in_discussion', 'conclusions_found', 'cited_in_conclusions', 'sentence_citing_intro', 'sentence_citing_maintext', 'sentence_citing_discussion', 'sentence_citing_conclusions']
 
 ____________________________________________________________________________________________________________________
-words_frec_analysis_get_sentence.py
+[words_frec_analysis_get_sentence.py](modules/words_frec_analysis_get_sentence.py)
 
 .filter_sentence
 	It removes citations, some words that may be labels and stop words
