@@ -12,7 +12,7 @@ PROGRAMS
 ____________________________________________________________________________________________________________________
 [front.ipynb]
 
-•	It runs sequentially the different programs described below and commnents them. 
+•	It comments the programs described below and it runs them sequentially. 
 •	It allows to pick the DOIs of the papers to analyse directly from this notebook or from a file (DOIs_1000times.tsv is provided as an example). 
 
 ____________________________________________________________________________________________________________________
