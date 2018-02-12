@@ -1,16 +1,17 @@
 # citation-context
 
-The aim to analyzed the context of the citation of any paper in other papers included in the the PMC Open Access Subset (PMC OAS) 
+The aim to analyze the context of the citation of any paper in other papers included in the the PMC Open Access Subset (PMC OAS) 
 (https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/).  
 This is a collection of open access papers that can be accessed through a FTP service. The format of the papers is XML.
 
+[Contributions](contributing.md) to further develop this project are wellcome.
 
 ____________________________________________________________________________________________________________________
 PROGRAMS
 
 
 ____________________________________________________________________________________________________________________
-[front.ipynb]
+[front](front.ipynb)
 
 •	It comments the programs described below and it runs them sequentially. 
 •	It allows to pick the DOIs of the papers to analyse directly from this notebook or from a file (DOIs_1000times.tsv is provided as an example). 
@@ -132,3 +133,4 @@ ________________________________________________________________________________
 	Similar to .analysis, but there is no limit of words studied.
 . analyse_bigrams
 	Most frequent bi-grams.
+	
