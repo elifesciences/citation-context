@@ -1,6 +1,6 @@
 bs4==0.0.1
 lxml==3.6.4
-nltk==3.2.5
+nltk==3.4.5
 numpy==1.13.3
 pandas==0.21.0
 twython==3.6.0
